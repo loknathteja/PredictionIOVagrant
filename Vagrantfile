@@ -27,7 +27,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # PredictionIO provision script
   config.vm.provision "shell", run: "always" do |s|
-    s.path = "provision.sh"
+    s.path = "install.sh"
+    s.args = " y"
     s.privileged = false
   end
 
